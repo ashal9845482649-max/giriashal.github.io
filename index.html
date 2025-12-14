@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Giri Ashal | Student Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ================= CSS (CSS3) ================= -->
+  <style>
+    /* Reset & basics */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b1c2d;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    header p {
+      font-size: 14px;
+      color: #b0c7d1;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #7dd3fc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+    }
+
+    section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: #7dd3fc;
+    }
+
+    /* Flexbox layout */
+    .about {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid #7dd3fc;
+    }
+
+    /* Table styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table th, table td {
+      padding: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      text-align: left;
+    }
+
+    table th {
+      color: #bde9ff;
+    }
+
+    /* Grid layout */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .project-box {
+      background: rgba(255,255,255,0.08);
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    /* Forms */
+    input, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      background: #7dd3fc;
+      color: #002b36;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #5ec2f2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #b0c7d1;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+    }
+  </style>A
+</head>
+
+<body>
+
+<!-- ================= HEADER & NAV (Semantic Tags) ================= -->
+<header>
+  <h1>Giri Ashal</h1>
+  <p>Student ID: 20251475 | Web Programming Course</p>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#projects">Projects</a></li>
+      s<li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="container">
+
+  <!-- ================= ABOUT SECTION ================= -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+      <img src="https://via.placeholder.com/150" alt="Profile Image">
+      <div>
+        <p>Hello! My name is <strong>Giri Ashal</strong>. I am an IT student learning web programming.</p>
+        <p>This homepage demonstrates my understanding of <span>HTML5</span>, <span>CSS3</span>, and <span>JavaScript</span>.</p>
+        <ul>
+          <li>HTML text, list, table, media & form tags</li>
+          <li>CSS Flexbox, Grid, Box Model & Responsive Design</li>
+          <li>JavaScript DOM manipulation & events</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SCHEDULE SECTION ================= -->
+  <section id="schedule">
+    <h2>Weekly Schedule</h2>
+
+    <form id="scheduleForm">
+      <input type="text" id="course" placeholder="Course Name" required>
+      <input type="text" id="day" placeholder="Day (Mon/Tue)" required>
+      <input type="time" id="time" required>
+      <button type="submit">Add Schedule</button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Course</th>
+          <th>Day</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="scheduleBody"></tbody>
+    </table>
+  </section>
+
+  <!-- ================= PROJECTS SECTION ================= -->
+  <section id="projects">
+    <h2>Projects & Skills</h2>
+    <div class="projects">
+      <div class="project-box">
+        <h3>HTML & CSS Portfolio</h3>
+        <p>Basic static website using semantic HTML and CSS layouts.</p>
+      </div>
+      <div class="project-box">
+        <h3>JavaScript Schedule App</h3>
+        <p>Uses arrays, objects, loops, DOM selection, and events.</p>
+      </div>
+      <div class="project-box">
+        <h3>Web Programming Notes</h3>
+        <ol>
+          <li>HTML5 Basics</li>
+          <li>CSS3 Layouts</li>
+          <li>JavaScript DOM</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT SECTION ================= -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="contactReply"></p>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="year"></span> Giri Ashal | Web Programming
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script>
+  // Variables & Arrays
+  let schedule = [];
+
+  // DOM Elements
+  const form = document.getElementById("scheduleForm");
+  const body = document.getElementById("scheduleBody");
+  const year = document.getElementById("year");
+
+  // Show current year
+  year.textContent = new Date().getFullYear();
+
+  // Add schedule (Events, DOM, Objects)
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const course = document.getElementById("course").value;
+    const day = document.getElementById("day").value;
+    const time = document.getElementById("time").value;
+
+    const item = { course, day, time };
+    schedule.push(item);
+
+    renderSchedule();
+    form.reset();
+  });
+
+  // Function, Loop, DOM modification
+  function renderSchedule() {
+    body.innerHTML = "";
+    for (let i = 0; i < schedule.length; i++) {
+      body.innerHTML += `
+        <tr>
+          <td>${i + 1}</td>
+          <td>${schedule[i].course}</td>
+          <td>${schedule[i].day}</td>
+          <td>${schedule[i].time}</td>
+        </tr>
+      `;
+    }
+  }
+
+  // Contact form feedback
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    document.getElementById("contactReply").textContent =
+      "Thank you! This form demonstrates front-end form handling using JavaScript.";
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
